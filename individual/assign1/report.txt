@@ -1,0 +1,28 @@
+Task 1 - Brief introduction
+
+My name is Christian Enevoldsen.
+I study Computer Science at Diku.
+
+I'm at an intermediate level of SML programming. Functors and modules (I guess) is not my best topics.
+I could be better at assembly, but I understand the basics of writing ASM.
+
+My expectations of this course is to learn the fundamentals for writing compilers.
+The most interesting topics so far is lexing and parsing since it's the only things we have tried so far
+
+Task 2
+
+First of all I have made some helper functions. Add3 simply takes x and adds 3 to x, so x += 3
+Then I made readIntArr which takes an int array and overrides it with 3..k+2
+Plus takes as argument x and y and adds then om
+sum uses plus to reduce and array by summing up the entries
+writei simply writes and returns an int
+w writes an int array and returns it
+main takes an input n, creates a 2d array xs of int arrays each containing {0..<n}, maps it writh readIntArr to overwrite the entries
+then it creates y when which is a list of the sums of xs
+then it takes a p and determines what to return
+
+Task 3
+Lexer.lex defines the regular expressions to generate the tokens of a character stream
+Parser.grm maps defines the tokens, creates a hierarchy of different operations, indicates what the program should contain and its structure
+and sets a symbol table that is used to figure out what to do in "pattern matching"
+

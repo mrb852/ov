@@ -1,0 +1,4 @@
+fun bool greater(int n) = n < 5
+fun int writeInt(int i) = write(i)
+fun [int] main() =
+  let a = {1,2,3,4,6,10,11} in map(writeInt, filter(greater, a))

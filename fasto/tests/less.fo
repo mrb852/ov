@@ -1,0 +1,4 @@
+fun bool main() =
+  let x = write(10 < 20) in
+  let y = write(20 < 10) in
+  write(x && y)

@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper]{article}
+
+\setlength{\textwidth}{165mm}
+\setlength{\textheight}{240mm}
+\setlength{\parindent}{0mm} % S{\aa} meget rykkes ind efter afsnit
+\setlength{\parskip}{\parsep}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\hoffset}{-2.5mm}
+\setlength{\voffset}{0mm}
+\setlength{\footskip}{15mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+
+\usepackage{amsmath} % flere matematikkommandoer
+\makeatletter
+\usepackage[all]{xy}
+\usepackage{graphicx}    % For grafik (billederfiler)
+\usepackage[T1]{fontenc} % For at blande \textsc{} med \textbf{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{eucal}
+\usepackage[danish]{babel}
+\usepackage{enumerate}  
+\usepackage{hyperref}
+\usepackage{url}
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\usepackage{mathptmx}
+
+\usepackage{multirow}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{tabularx,colortbl,xcolor}
+\definecolor{KU-red}{RGB}{144,26,30} 
+
+\DeclareSymbolFont{usualmathcal}{OMS}{cmsy}{m}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{usualmathcal}
+
+
+\DeclareSymbolFont{letters}{OML}{txmi}{m}{it}
+
+\DeclareMathSymbol{\alpha}{\mathord}{letters}{"0B}
+\DeclareMathSymbol{\beta}{\mathord}{letters}{"0C}
+\DeclareMathSymbol{\gamma}{\mathord}{letters}{"0D}
+\DeclareMathSymbol{\delta}{\mathord}{letters}{"0E}
+\DeclareMathSymbol{\epsilon}{\mathord}{letters}{"0F}
+\DeclareMathSymbol{\zeta}{\mathord}{letters}{"10}
+\DeclareMathSymbol{\eta}{\mathord}{letters}{"11}
+\DeclareMathSymbol{\theta}{\mathord}{letters}{"12}
+\DeclareMathSymbol{\iota}{\mathord}{letters}{"13}
+\DeclareMathSymbol{\kappa}{\mathord}{letters}{"14}
+\DeclareMathSymbol{\lambda}{\mathord}{letters}{"15}
+\DeclareMathSymbol{\mu}{\mathord}{letters}{"16}
+\DeclareMathSymbol{\nu}{\mathord}{letters}{"17}
+\DeclareMathSymbol{\xi}{\mathord}{letters}{"18}
+\DeclareMathSymbol{\pi}{\mathord}{letters}{"19}
+\DeclareMathSymbol{\rho}{\mathord}{letters}{"1A}
+\DeclareMathSymbol{\sigma}{\mathord}{letters}{"1B}
+\DeclareMathSymbol{\tau}{\mathord}{letters}{"1C}
+\DeclareMathSymbol{\upsilon}{\mathord}{letters}{"1D}
+\DeclareMathSymbol{\phi}{\mathord}{letters}{"1E}
+\DeclareMathSymbol{\chi}{\mathord}{letters}{"1F}
+\DeclareMathSymbol{\psi}{\mathord}{letters}{"20}
+\DeclareMathSymbol{\omega}{\mathord}{letters}{"21}
+\DeclareMathSymbol{\varepsilon}{\mathord}{letters}{"22}
+\DeclareMathSymbol{\vartheta}{\mathord}{letters}{"23}
+\DeclareMathSymbol{\varpi}{\mathord}{letters}{"24}
+\DeclareMathSymbol{\varrho}{\mathord}{letters}{"25}
+\DeclareMathSymbol{\varsigma}{\mathord}{letters}{"26}
+\DeclareMathSymbol{\varphi}{\mathord}{letters}{"27}
+
+\DeclareMathSymbol{\Gamma}{\mathord}{letters}{"00}
+\DeclareMathSymbol{\Delta}{\mathord}{letters}{"01}
+\DeclareMathSymbol{\Theta}{\mathord}{letters}{"02}
+\DeclareMathSymbol{\Lambda}{\mathord}{letters}{"03}
+\DeclareMathSymbol{\Xi}{\mathord}{letters}{"04}
+\DeclareMathSymbol{\Pi}{\mathord}{letters}{"05}
+\DeclareMathSymbol{\Sigma}{\mathord}{letters}{"06}
+\DeclareMathSymbol{\Upsilon}{\mathord}{letters}{"07}
+\DeclareMathSymbol{\Phi}{\mathord}{letters}{"08}
+\DeclareMathSymbol{\Psi}{\mathord}{letters}{"09}
+\DeclareMathSymbol{\Omega}{\mathord}{letters}{"0A}
+
+\DeclareMathSymbol{\upGamma}{\mathalpha}{operators}{"00}
+\DeclareMathSymbol{\upDelta}{\mathalpha}{operators}{"01}
+\DeclareMathSymbol{\upTheta}{\mathalpha}{operators}{"02}
+\DeclareMathSymbol{\upLambda}{\mathalpha}{operators}{"03}
+\DeclareMathSymbol{\upXi}{\mathalpha}{operators}{"04}
+\DeclareMathSymbol{\upPi}{\mathalpha}{operators}{"05}
+\DeclareMathSymbol{\upSigma}{\mathalpha}{operators}{"06}
+\DeclareMathSymbol{\upUpsilon}{\mathalpha}{operators}{"07}
+\DeclareMathSymbol{\upPhi}{\mathalpha}{operators}{"08}
+\DeclareMathSymbol{\upPsi}{\mathalpha}{operators}{"09}
+\DeclareMathSymbol{\upOmega}{\mathalpha}{operators}{"0A}
+
+
+
+\newcommand{\hhemail}[1]{\textsf{#1}}
+\newcommand{\hhurl}[1]{{\color{blue}\url{#1}}}
+
+\begin{document}
+
+\newpage
+
+Christian Enevoldsen\\
+
+\textbf{Exercise 1}
+
+\textbf{a}\\
+Det ville printe x: 3 og y: 1, fordi de ikke bliver ændret når man bruger call by value.\\
+
+
+\textbf{b}\\
+Den printer flg. fordi a og c peger til samme adresse.
+r: 19
+x: 8, y: 3\\
+
+\textbf{c}\\
+Den ville printe flg. fordi at y og x bliver ændret i funktionen. x bliver ændret 2 gange, men den sidste reference er ved c.
+r: 13
+x: 7
+y: 2\\
+
+\textbf{Exercise 2}
+
+\textbf{a}\\
+f(3) ville printe x: 4, da den tjekker om den lokale x er tre, hvilket det er og kalder en funktion g som bare printer den globale x.\\
+
+f(5) ville printe printe 4 af samme grund.
+
+\textbf{b}\\
+f(3) ville printe x: 3 da den ville overskrive den første erklærede instans af x, hvilket er den globale. Derefter er x = 3 hvilket forårsager at g bliver kaldt og den printer så x: 3
+
+f(5) ville printe 7, fordi den globale x altid bliver overskrevet af nye erklæringer.\\
+
+\textbf{exercise 3}
+
+\textbf{a}\\
+fun char main() =
+  let x = read(char) in
+    if x == 'c' then x else 1
+
+I eksemplet ovenfor vil interpreteren ikke opdage fejlen før if statementet og derfor vil den først printe en fejl når x != 'c'.
+
+\textbf{b} \\
+
+Scan: \\
+$\forall a . \forall b. ((a * b) \rightarrow b * [a]) \rightarrow [b] $
+
+1. Udregn typen af et element fra $a: t$\\
+2. udregn typen af expr $e: te$ \\
+3. Tjek om typerne matcher i $ftable$ \\	
+4. IF $argc$ (arg count)$!= 2$ THEN error ELSE good\\
+5. IF $typeof(argv[1]) == t $ AND $ typeof(argv[2]) == te$ THEN good ELSE error\\
+6. IF$ typeof(retVal) == t $ THEN good ELSE error\\
+
+Filter: \\
+$\forall a (a \rightarrow b * [a]) \rightarrow [a], b = bool $
+
+
+1. Udregn typen af et element fra $a: t$\\
+2. Tjek om typen matcher i $ftable$ \\	
+3. IF $argc$ (arg count)$\ne 1$ THEN error ELSE good\\
+4. IF $typeof(argv[1]) == bool$ THEN good ELSE error\\
+5. IF $ typeof(retVal) == bool $ THEN good ELSE error\\
+
+\end{document}
+

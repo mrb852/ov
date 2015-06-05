@@ -1,0 +1,4 @@
+fun bool main() =
+  let x = read(bool) in
+  let y = read(bool) in
+  let xx = write(x) in let yy = write(y) in yy

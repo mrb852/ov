@@ -1,0 +1,39 @@
+Exercise 1
+
+1.a
+Det ville printe x: 3 og y: 1, fordi de ikke bliver ændret når man bruger call by value.
+
+1.b
+Den printer flg. fordi a og c peger til samme addresse.
+r: 19
+x: 8, y: 3
+
+1.c
+Den ville printe flg. fordi at y og x bliver ændret i funktionen. x bliver ændret 2 gange, men den sidste reference er ved c.
+r: 13
+x: 7
+y: 2
+
+Exercise 2
+
+2.a
+f(3) ville printe x: 4, da den tjekker om den lokale x er tre, hvilket det er og kalder en funktion g som bare printer den globale x.
+
+f(5) ville printe printe 4 af samme grund.
+
+2.b
+f(3) ville printe x: 3 da den ville overskrive den første erklærede instans af x, hvilket er den globale. Derefter er x = 3 hvilket forårsager at g bliver kaldt og den printer så x: 3
+
+f(5) ville printe 7, fordi den globale x altid bliver overskrevet af nye erklæringer.
+
+3.
+
+3.a
+fun char main() =
+  let x = read(char) in
+    if x == 'c' then x else 1
+
+I eksemplet ovenfor vil interpreteren ikke opdage fejlen før if statementet og derfor vil den først printe en fejl når x != 'c'.
+
+3.b
+

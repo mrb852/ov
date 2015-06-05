@@ -1,0 +1,39 @@
+%{
+open FEIEF;
+%}
+
+%token FALSE TRUE
+%token OR AND IMPLIES
+%token NOT
+%token FORALL IN EXISTS
+%token LPAR RPAR
+%token EOF
+%token <string> VAR
+
+%nonassoc NOT
+%left AND OR
+%right IMPLIES
+%left FORALL EXISTS IN
+
+%start Prog
+
+%type <FEIEF.Prog> Prog
+%type <FEIEF.Expr> Expr
+
+%%
+
+Prog: Expr EOF {$1}
+;
+
+Expr:
+  Expr OR Expr          { FEIEF.Or ($1, $3) }
+  | Expr AND Expr       { FEIEF.And ($1, $3) }
+  | Expr IMPLIES Expr   { FEIEF.Implies($1, $3) }
+  | NOT Expr            { FEIEF.Not($2) }
+  | FORALL VAR IN Expr  { FEIEF.Forall($2, $4) }
+  | EXISTS VAR IN Expr  { FEIEF.Exists($2, $4) }
+  | LPAR Expr RPAR      { $2 }
+  | VAR                 { FEIEF.Var($1) }
+  | FALSE               { FEIEF.False }
+  | TRUE                { FEIEF.True }
+;

@@ -1,0 +1,3 @@
+fun int writeInt(int n) = write(n)
+
+fun int main() = let a = read(int) in let b = read(int) in writeInt(a * b)

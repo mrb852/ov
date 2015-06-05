@@ -1,0 +1,18 @@
+fun int add3(int x) = x + 3
+fun [int] readIntArr([int] xs) = let x = map(add3, iota(read(int))) in x
+fun int plus(int x, int y) = x + y
+fun int sum([int] xs) = let v = reduce(plus, 0, xs) in v
+fun int writei(int i) = write(i)
+fun [int] w([int] x) = map(writei, x)
+
+fun [int] main() =
+  let n = read(int) in
+  let xs = map(readIntArr, replicate(n, iota(n))) in
+  let y = map(sum, xs) in
+  let p = read(int) in
+    if 2 < p then
+      if p < n then
+        let s = w(xs[p]) in xs[p]
+      else let ss = w(y) in y
+    else
+      let sss = w(xs[p]) in xs[p]
